@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sister Eveleen Retreat House | Christian Spiritual Retreat | Sumner, Christchurch</title>
+  <meta name="description" content="A Christian retreat house nestled among native trees and beach flora on Scarborough Hill, Sumner, Christchurch. A sacred space to reflect, rest, pray, or simply be.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-sand: #f5f1eb;
+      --color-sand-dark: #e8e2d8;
+      --color-ocean: #5a7a8a;
+      --color-ocean-deep: #3d5a68;
+      --color-ocean-light: #8ba5b2;
+      --color-earth: #8b7355;
+      --color-earth-light: #a69076;
+      --color-sage: #9caa9c;
+      --color-sage-light: #c5d1c5;
+      --color-charcoal: #2d3436;
+      --color-warm-white: #fdfcfa;
+      --color-gold: #c9a961;
+      
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Jost', -apple-system, sans-serif;
+      
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 2rem;
+      --space-lg: 4rem;
+      --space-xl: 8rem;
+      
+      --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-weight: 300;
+      color: var(--color-charcoal);
+      background: var(--color-warm-white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    
+    /* Subtle grain texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0.03;
+      z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+    
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      line-height: 1.2;
+    }
+    
+    h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); }
+    h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+    h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+    
+    p {
+      font-size: 1rem;
+      max-width: 65ch;
+    }
+    
+    a {
+      color: var(--color-ocean);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    
+    a:hover {
+      color: var(--color-ocean-deep);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Layout */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+    
+    section {
+      padding: var(--space-xl) 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: var(--space-sm) 0;
+      background: rgba(253, 252, 250, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid transparent;
+      transition: all var(--transition);
+    }
+    
+    header.scrolled {
+      padding: var(--space-xs) 0;
+      border-bottom-color: var(--color-sand-dark);
+    }
+    
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    
+    .logo-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--color-ocean);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-style: italic;
+    }
+    
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--color-charcoal);
+      line-height: 1.2;
+    }
+    
+    .logo-text span {
+      display: block;
+      font-size: 0.75rem;
+      font-family: var(--font-body);
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-ocean);
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+    
+    nav a {
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--color-charcoal);
+      position: relative;
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--color-ocean);
+      transition: width var(--transition);
+    }
+    
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    .nav-cta {
+      background: var(--color-ocean);
+      color: white !important;
+      padding: 0.75rem 1.5rem;
+      border-radius: 2px;
+      font-weight: 400;
+    }
+    
+    .nav-cta::after {
+      display: none;
+    }
+    
+    .nav-cta:hover {
+      background: var(--color-ocean-deep);
+      color: white !important;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: var(--space-xs);
+    }
+    
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-charcoal);
+      margin: 5px 0;
+      transition: var(--transition);
+    }
+    
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: linear-gradient(135deg, var(--color-sand) 0%, var(--color-warm-white) 50%, var(--color-sage-light) 100%);
+      overflow: hidden;
+      padding-top: 80px;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 80%;
+      height: 150%;
+      background: radial-gradient(ellipse, var(--color-ocean-light) 0%, transparent 70%);
+      opacity: 0.15;
+      animation: float 20s ease-in-out infinite;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse, var(--color-sage) 0%, transparent 70%);
+      opacity: 0.1;
+      animation: float 15s ease-in-out infinite reverse;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(30px, 20px) rotate(2deg); }
+    }
+    
+    .hero-content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      padding: var(--space-lg);
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      background: white;
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-ocean);
+      margin-bottom: var(--space-md);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+    
+    .hero h1 {
+      color: var(--color-charcoal);
+      margin-bottom: var(--space-md);
+      animation: fadeInUp 1s ease-out 0.2s backwards;
+    }
+    
+    .hero h1 em {
+      font-style: italic;
+      color: var(--color-ocean);
+    }
+    
+    .hero-subtitle {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-style: italic;
+      color: var(--color-earth);
+      margin-bottom: var(--space-lg);
+      animation: fadeInUp 1s ease-out 0.4s backwards;
+    }
+    
+    .hero-actions {
+      display: flex;
+      gap: var(--space-sm);
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 1s ease-out 0.6s backwards;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+    
+    .btn-primary {
+      background: var(--color-ocean);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: var(--color-ocean-deep);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(90, 122, 138, 0.3);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-charcoal);
+      border: 1px solid var(--color-charcoal);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--color-charcoal);
+      color: white;
+    }
+    
+    .hero-scroll {
+      position: absolute;
+      bottom: var(--space-lg);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-xs);
+      color: var(--color-ocean);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      animation: bounce 2s ease-in-out infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+    
+    /* About Section */
+    .about {
+      background: var(--color-warm-white);
+      position: relative;
+    }
+    
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+    
+    .about-content {
+      padding-right: var(--space-lg);
+    }
+    
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-ocean);
+      margin-bottom: var(--space-sm);
+      position: relative;
+      padding-left: 3rem;
+    }
+    
+    .section-label::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 2rem;
+      height: 1px;
+      background: var(--color-ocean);
+    }
+    
+    .about-content h2 {
+      color: var(--color-charcoal);
+      margin-bottom: var(--space-md);
+    }
+    
+    .about-content p {
+      margin-bottom: var(--space-sm);
+      color: var(--color-charcoal);
+    }
+    
+    .about-content p.highlight {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--color-earth);
+      border-left: 2px solid var(--color-gold);
+      padding-left: var(--space-sm);
+      margin: var(--space-md) 0;
+    }
+    
+    .about-image {
+      position: relative;
+    }
+    
+    .about-image-main {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    
+    .about-image-accent {
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      width: 200px;
+      height: 200px;
+      background: var(--color-sage-light);
+      border-radius: 4px;
+      z-index: -1;
+    }
+    
+    .diocese-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      background: var(--color-sand);
+      padding: 0.75rem 1.25rem;
+      border-radius: 4px;
+      margin-top: var(--space-md);
+      font-size: 0.875rem;
+      color: var(--color-charcoal);
+    }
+    
+    .diocese-badge svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-ocean);
+    }
+    
+    /* Video CTA */
+    .video-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+      padding: var(--space-sm);
+      background: var(--color-sand);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    
+    .video-cta:hover {
+      background: var(--color-sand-dark);
+      transform: translateX(5px);
+    }
+    
+    .video-cta-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--color-ocean);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .video-cta-text {
+      font-size: 0.875rem;
+    }
+    
+    .video-cta-text strong {
+      display: block;
+      font-weight: 500;
+      color: var(--color-charcoal);
+    }
+    
+    .video-cta-text span {
+      color: var(--color-ocean);
+      font-size: 0.8rem;
+    }
+    
+    /* Rooms Section */
+    .rooms {
+      background: var(--color-sand);
+      position: relative;
+    }
+    
+    .rooms::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-ocean-light), transparent);
+    }
+    
+    .rooms-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto var(--space-xl);
+    }
+    
+    .rooms-header h2 {
+      margin-bottom: var(--space-sm);
+    }
+    
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: var(--space-md);
+    }
+    
+    .room-card {
+      background: white;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: all var(--transition);
+    }
+    
+    .room-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    
+    .room-card-image {
+      height: 250px;
+      background: var(--color-sage-light);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .room-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition);
+    }
+    
+    .room-card:hover .room-card-image img {
+      transform: scale(1.05);
+    }
+    
+    .room-card-badge {
+      position: absolute;
+      top: var(--space-sm);
+      right: var(--space-sm);
+      background: white;
+      padding: 0.5rem 1rem;
+      border-radius: 2px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--color-ocean);
+    }
+    
+    .room-card-content {
+      padding: var(--space-md);
+    }
+    
+    .room-card h3 {
+      margin-bottom: var(--space-xs);
+      font-size: 1.3rem;
+    }
+    
+    .room-card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .room-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .room-feature {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      background: var(--color-sand);
+      border-radius: 100px;
+      color: var(--color-charcoal);
+    }
+    
+    .room-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-sand);
+    }
+    
+    .room-price-amount {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--color-ocean);
+    }
+    
+    .room-price-amount span {
+      font-size: 0.875rem;
+      color: #666;
+      font-family: var(--font-body);
+    }
+    
+    /* Day Retreat Banner */
+    .day-retreat-banner {
+      background: linear-gradient(135deg, var(--color-ocean) 0%, var(--color-ocean-deep) 100%);
+      color: white;
+      padding: var(--space-lg);
+      border-radius: 4px;
+      margin-top: var(--space-xl);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+    
+    .day-retreat-banner h3 {
+      color: white;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .day-retreat-banner p {
+      opacity: 0.9;
+    }
+    
+    .day-retreat-banner .btn {
+      background: white;
+      color: var(--color-ocean);
+    }
+    
+    .day-retreat-banner .btn:hover {
+      background: var(--color-sand);
+      color: var(--color-ocean-deep);
+    }
+    
+    /* Services Section */
+    .services {
+      background: var(--color-warm-white);
+    }
+    
+    .services-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto var(--space-xl);
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+    }
+    
+    .service-card {
+      padding: var(--space-lg);
+      background: var(--color-sand);
+      border-radius: 4px;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+    
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto var(--space-sm);
+      background: var(--color-ocean);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .service-card h4 {
+      margin-bottom: var(--space-xs);
+    }
+    
+    .service-card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0 auto;
+    }
+    
+    /* Team Section */
+    .team {
+      background: var(--color-sand);
+      padding: var(--space-xl) 0;
+    }
+    
+    .team-header {
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .team-member {
+      display: flex;
+      gap: var(--space-md);
+      align-items: flex-start;
+      background: white;
+      padding: var(--space-md);
+      border-radius: 4px;
+    }
+    
+    .team-member-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--color-sage-light);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--color-ocean);
+    }
+    
+    .team-member h4 {
+      margin-bottom: 0.25rem;
+    }
+    
+    .team-member-role {
+      font-size: 0.875rem;
+      color: var(--color-ocean);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .team-member p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    /* Chapel / Prayer Section */
+    .chapel {
+      background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a1f20 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .chapel::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+    
+    .chapel-content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+    
+    .chapel-text h2 {
+      color: white;
+      margin-bottom: var(--space-md);
+    }
+    
+    .chapel-text p {
+      opacity: 0.85;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .prayer-times {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: var(--space-md);
+    }
+    
+    .prayer-times h3 {
+      color: var(--color-gold);
+      margin-bottom: var(--space-sm);
+      font-size: 1.3rem;
+    }
+    
+    .prayer-time-item {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-xs) 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .prayer-time-item:last-child {
+      border-bottom: none;
+    }
+    
+    .prayer-time-day {
+      font-weight: 400;
+      color: white;
+    }
+    
+    .prayer-time-type {
+      color: var(--color-ocean-light);
+      font-style: italic;
+    }
+    
+    .prayer-note {
+      margin-top: var(--space-sm);
+      padding: var(--space-sm);
+      background: rgba(201, 169, 97, 0.1);
+      border-radius: 4px;
+      font-size: 0.875rem;
+      color: var(--color-gold);
+    }
+    
+    /* Gallery Section */
+    .gallery {
+      background: var(--color-warm-white);
+    }
+    
+    .gallery-header {
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 250px);
+      gap: var(--space-sm);
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .gallery-item:nth-child(1) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition);
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+      opacity: 0;
+      transition: opacity var(--transition);
+      display: flex;
+      align-items: flex-end;
+      padding: var(--space-sm);
+    }
+    
+    .gallery-item:hover .gallery-item-overlay {
+      opacity: 1;
+    }
+    
+    .gallery-item-overlay span {
+      color: white;
+      font-size: 0.875rem;
+    }
+    
+    /* Things to Do */
+    .things-to-do {
+      background: var(--color-sand);
+    }
+    
+    .things-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .things-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+    }
+    
+    .thing-card {
+      background: white;
+      padding: var(--space-md);
+      border-radius: 4px;
+      transition: all var(--transition);
+    }
+    
+    .thing-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    
+    .thing-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--color-sage-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-sm);
+      color: var(--color-ocean-deep);
+    }
+    
+    .thing-card h4 {
+      margin-bottom: var(--space-xs);
+    }
+    
+    .thing-card p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    /* Testimonial */
+    .testimonial {
+      background: var(--color-ocean);
+      color: white;
+      text-align: center;
+      padding: var(--space-xl) 0;
+    }
+    
+    .testimonial-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .testimonial-quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-style: italic;
+      line-height: 1.4;
+      margin-bottom: var(--space-md);
+    }
+    
+    .testimonial-quote::before {
+      content: '"';
+      display: block;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--color-gold);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .testimonial-author {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      letter-spacing: 0.1em;
+    }
+    
+    /* Calendar Section */
+    .calendar {
+      background: var(--color-warm-white);
+    }
+    
+    .calendar-header {
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .calendar-embed {
+      background: white;
+      border-radius: 4px;
+      padding: var(--space-md);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-style: italic;
+    }
+    
+    /* Access Disclosure */
+    .access {
+      background: var(--color-sand);
+    }
+    
+    .access-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+    
+    .access-text h2 {
+      margin-bottom: var(--space-md);
+    }
+    
+    .access-text p {
+      margin-bottom: var(--space-sm);
+    }
+    
+    .access-note {
+      background: white;
+      padding: var(--space-md);
+      border-radius: 4px;
+      border-left: 3px solid var(--color-gold);
+      margin-top: var(--space-md);
+    }
+    
+    .access-note h4 {
+      color: var(--color-earth);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .access-map {
+      height: 400px;
+      background: var(--color-ocean-light);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .access-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    /* Downloads */
+    .downloads {
+      background: linear-gradient(135deg, var(--color-earth) 0%, var(--color-earth-light) 100%);
+      color: white;
+      padding: var(--space-lg) 0;
+    }
+    
+    .downloads-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+    
+    .downloads-text h3 {
+      color: white;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .downloads-text p {
+      opacity: 0.9;
+    }
+    
+    .downloads-links {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+    
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      background: white;
+      color: var(--color-earth);
+      border-radius: 4px;
+      font-size: 0.875rem;
+      font-weight: 400;
+      transition: all var(--transition);
+    }
+    
+    .download-btn:hover {
+      background: var(--color-sand);
+      transform: translateY(-2px);
+      color: var(--color-earth);
+    }
+    
+    /* Newsletter */
+    .newsletter {
+      background: var(--color-warm-white);
+      padding: var(--space-xl) 0;
+    }
+    
+    .newsletter-content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .newsletter h2 {
+      margin-bottom: var(--space-sm);
+    }
+    
+    .newsletter p {
+      margin: 0 auto var(--space-md);
+      color: #666;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      gap: var(--space-xs);
+    }
+    
+    .newsletter-form input {
+      flex: 1;
+      padding: 1rem 1.5rem;
+      border: 1px solid var(--color-sand-dark);
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      transition: border-color var(--transition);
+    }
+    
+    .newsletter-form input:focus {
+      outline: none;
+      border-color: var(--color-ocean);
+    }
+    
+    .newsletter-form button {
+      padding: 1rem 2rem;
+      background: var(--color-ocean);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+    
+    .newsletter-form button:hover {
+      background: var(--color-ocean-deep);
+    }
+    
+    /* Contact Section */
+    .contact {
+      background: var(--color-charcoal);
+      color: white;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+    }
+    
+    .contact-info h2 {
+      color: white;
+      margin-bottom: var(--space-md);
+    }
+    
+    .contact-info p {
+      opacity: 0.85;
+      margin-bottom: var(--space-md);
+    }
+    
+    .contact-details {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .contact-item {
+      display: flex;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .contact-item svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-gold);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    
+    .contact-item a {
+      color: white;
+    }
+    
+    .contact-item a:hover {
+      color: var(--color-gold);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: var(--space-sm);
+    }
+    
+    .social-link {
+      width: 45px;
+      height: 45px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: all var(--transition);
+    }
+    
+    .social-link:hover {
+      background: var(--color-ocean);
+      transform: translateY(-3px);
+    }
+    
+    .contact-form {
+      background: rgba(255,255,255,0.05);
+      padding: var(--space-lg);
+      border-radius: 4px;
+    }
+    
+    .form-group {
+      margin-bottom: var(--space-sm);
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      color: white;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      transition: border-color var(--transition);
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-ocean);
+    }
+    
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255,255,255,0.4);
+    }
+    
+    .contact-form .btn {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    /* Footer */
+    footer {
+      background: #1a1f20;
+      color: white;
+      padding: var(--space-lg) 0 var(--space-md);
+    }
+    
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--space-lg);
+      padding-bottom: var(--space-lg);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .footer-brand .logo {
+      margin-bottom: var(--space-sm);
+    }
+    
+    .footer-brand .logo-icon {
+      background: var(--color-ocean);
+    }
+    
+    .footer-brand .logo-text {
+      color: white;
+    }
+    
+    .footer-brand p {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      max-width: 300px;
+    }
+    
+    .footer-column h4 {
+      color: white;
+      font-size: 1rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer-column a {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    .footer-column a:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: var(--space-md);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+    }
+    
+    .footer-bottom a {
+      color: rgba(255,255,255,0.5);
+    }
+    
+    .footer-bottom a:hover {
+      color: white;
+    }
+    
+    /* Mobile Menu */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--color-warm-white);
+      z-index: 999;
+      padding: var(--space-xl) var(--space-md);
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--space-sm);
+    }
+    
+    .mobile-nav.active {
+      display: flex;
+    }
+    
+    .mobile-nav a {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--color-charcoal);
+      padding: var(--space-xs) 0;
+    }
+    
+    .mobile-nav-close {
+      position: absolute;
+      top: var(--space-md);
+      right: var(--space-md);
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--color-charcoal);
+    }
+    
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .about-grid,
+      .chapel-content,
+      .access-content,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-content {
+        padding-right: 0;
+      }
+      
+      .about-image-accent {
+        display: none;
+      }
+      
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .things-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 200px);
+      }
+      
+      .gallery-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+      
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .hero {
+        padding: var(--space-xl) var(--space-sm);
+      }
+      
+      .hero-content {
+        padding: var(--space-md);
+      }
+      
+      .hero-actions {
+        flex-direction: column;
+      }
+      
+      .services-grid,
+      .things-grid,
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 200px);
+      }
+      
+      .gallery-item:nth-child(1) {
+        grid-column: span 1;
+      }
+      
+      .day-retreat-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .downloads-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+      
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-sm);
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="logo">
+          <div class="logo-icon">E</div>
+          <div class="logo-text">
+            Sister Eveleen
+            <span>Retreat House</span>
+          </div>
+        </a>
+        
+        <nav>
+          <a href="#about">About</a>
+          <a href="#rooms">Rooms</a>
+          <a href="#services">Services</a>
+          <a href="#chapel">Chapel</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <a href="#rooms" class="nav-cta">Book a Room</a>
+        </nav>
+        
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="toggleMobileMenu()">×</button>
+    <a href="#about" onclick="toggleMobileMenu()">About</a>
+    <a href="#rooms" onclick="toggleMobileMenu()">Rooms</a>
+    <a href="#services" onclick="toggleMobileMenu()">Services</a>
+    <a href="#chapel" onclick="toggleMobileMenu()">Chapel</a>
+    <a href="#gallery" onclick="toggleMobileMenu()">Gallery</a>
+    <a href="#things-to-do" onclick="toggleMobileMenu()">See & Do</a>
+    <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+    <a href="#rooms" onclick="toggleMobileMenu()">Book a Room</a>
+  </div>
+  
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        Anglican Diocese of Christchurch
+      </div>
+      <h1>A sacred space to <em>reflect, rest,</em> and simply <em>be</em></h1>
+      <p class="hero-subtitle">Nestled among native trees and beach flora on Scarborough Hill, Sumner — a place to replenish your spirit and immerse yourself in God's loving presence.</p>
+      <div class="hero-actions">
+        <a href="#rooms" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Book Your Stay
+        </a>
+        <a href="#about" class="btn btn-secondary">Discover Our Retreat</a>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll">
+      <span>Scroll</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </a>
+  </section>
+  
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-label">Welcome</span>
+          <h2>Warm greetings from all of us at Sister Eveleen Retreat House</h2>
+          <p>We are a Christian retreat house nestled among native trees and beach flora on Scarborough Hill, Sumner, Christchurch.</p>
+          <p class="highlight">It is our ministry to offer and hold a sacred space for you — a place to reflect, rest, pray, or simply be.</p>
+          <p>Whether you are here for a retreat, a self-guided stay, or with a group — you are welcome. St Francis Chapel, located on-site, is always open for prayer and quiet reflection. Our beautiful gardens offer another space to pause and enjoy God's presence.</p>
+          <p>Sister Eveleen Retreat House belongs to the Anglican Diocese of Christchurch — yet everyone is welcome to visit and spend time in prayer and contemplation.</p>
+          <p>Our mission is to continue Sister Eveleen's dream: to offer her home as a place where people can replenish their spirit and immerse themselves in God's loving presence.</p>
+          
+          <div class="diocese-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            With the Anglican Diocese of Christchurch
+          </div>
+          
+          <a href="https://youtube.com/shorts/LiLl9NflPZs" target="_blank" class="video-cta">
+            <div class="video-cta-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            <div class="video-cta-text">
+              <strong>Take a virtual tour</strong>
+              <span>Watch our short video</span>
+            </div>
+          </a>
+        </div>
+        <div class="about-image">
+          <img src="https://static.wixstatic.com/media/ea1911_aaf9c9a7f7f448819a4822e3469f908af000.jpg/v1/fill/w_800,h_600,al_c,q_85,enc_avif,quality_auto/ea1911_aaf9c9a7f7f448819a4822e3469f908af000.jpg" alt="Sister Eveleen Retreat House" class="about-image-main">
+          <div class="about-image-accent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Rooms -->
+  <section class="rooms" id="rooms">
+    <div class="container">
+      <div class="rooms-header">
+        <span class="section-label">Accommodation</span>
+        <h2>Our Rooms</h2>
+        <p>SERH offers 11 beds in 8 rooms, each offering a range of accommodation choices and prices, all with heating. All rooms are warm and inviting with captivating views of sky and sea.</p>
+      </div>
+      
+      <div class="rooms-grid">
+        <div class="room-card">
+          <div class="room-card-image">
+            <img src="https://static.wixstatic.com/media/ea1911_c164c1bf31b74070bbb369834aaba324~mv2_d_4288_2848_s_4_2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_avif,quality_auto/ea1911_c164c1bf31b74070bbb369834aaba324~mv2_d_4288_2848_s_4_2.jpg" alt="Single Room">
+            <span class="room-card-badge">Most Popular</span>
+          </div>
+          <div class="room-card-content">
+            <h3>Single Room</h3>
+            <p>A cozy, tranquil space perfect for personal reflection and spiritual retreat.</p>
+            <div class="room-features">
+              <span class="room-feature">Heating</span>
+              <span class="room-feature">Sea Views</span>
+              <span class="room-feature">Linen Provided</span>
+            </div>
+            <div class="room-price">
+              <span class="room-price-amount">From $65 <span>/ night</span></span>
+              <a href="mailto:antje_duda@sistereretreat.com?subject=Room%20Booking%20Enquiry" class="btn btn-primary">Enquire</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="room-card">
+          <div class="room-card-image">
+            <img src="https://static.wixstatic.com/media/ea1911_3441b6e9ef984e6a8a4520e9c51274fd~mv2_d_4288_2848_s_4_2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_avif,quality_auto/ea1911_3441b6e9ef984e6a8a4520e9c51274fd~mv2_d_4288_2848_s_4_2.jpg" alt="Twin Room">
+          </div>
+          <div class="room-card-content">
+            <h3>Twin Room</h3>
+            <p>Ideal for couples or friends seeking a peaceful getaway together.</p>
+            <div class="room-features">
+              <span class="room-feature">Heating</span>
+              <span class="room-feature">Garden Views</span>
+              <span class="room-feature">Linen Provided</span>
+            </div>
+            <div class="room-price">
+              <span class="room-price-amount">From $85 <span>/ night</span></span>
+              <a href="mailto:antje_duda@sistereretreat.com?subject=Room%20Booking%20Enquiry" class="btn btn-primary">Enquire</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="room-card">
+          <div class="room-card-image">
+            <img src="https://static.wixstatic.com/media/ea1911_75ac9d726cce45db9e09e791695c3a64~mv2_d_3504_2608_s_4_2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_avif,quality_auto/ea1911_75ac9d726cce45db9e09e791695c3a64~mv2_d_3504_2608_s_4_2.jpg" alt="Whole House">
+          </div>
+          <div class="room-card-content">
+            <h3>Whole House Booking</h3>
+            <p>Book the entire house for your team retreat, parish group, or special gathering.</p>
+            <div class="room-features">
+              <span class="room-feature">11 Beds</span>
+              <span class="room-feature">Self-Catered</span>
+              <span class="room-feature">All Facilities</span>
+            </div>
+            <div class="room-price">
+              <span class="room-price-amount">Contact Us</span>
+              <a href="mailto:antje_duda@sistereretreat.com?subject=Whole%20House%20Booking" class="btn btn-primary">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="day-retreat-banner">
+        <div>
+          <h3>Day Retreats Available</h3>
+          <p>Book a room for the day to enjoy a self-guided, self-catered retreat in our peaceful surroundings. Just NZ$30.</p>
+        </div>
+        <a href="mailto:antje_duda@sistereretreat.com?subject=Day%20Retreat%20Enquiry" class="btn">Enquire About Day Stays</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header">
+        <span class="section-label">Ministry & Services</span>
+        <h2>How We Serve You</h2>
+        <p>Everything you need for a peaceful and restorative retreat experience.</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <h4>Housekeeping</h4>
+          <p>Every room has linen and towels. Rooms are cleaned before and after your stay by our staff.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+          </div>
+          <h4>Kitchen Access</h4>
+          <p>Full kitchen available including oven, stove, microwave, fridge, freezer, and a variety of teas and coffees.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+          </div>
+          <h4>Spiritual Direction</h4>
+          <p>Individual or group spiritual direction can be arranged with our qualified spiritual directors upon request.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+          </div>
+          <h4>Beautiful Gardens</h4>
+          <p>Our garden on Scarborough Hill offers peaceful spots overlooking the sea for quiet meditation and prayer.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h4>Group Retreats</h4>
+          <p>We can organise contemplative mornings or day retreats tailored to your group's needs.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"></path><path d="M12 3v12"></path><path d="M12 3l4 4"></path><path d="M12 3L8 7"></path></svg>
+          </div>
+          <h4>Vouchers & Gift Cards</h4>
+          <p>Give the gift of rest and reflection. Vouchers available for day retreats, overnight stays, or longer retreats.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Team -->
+  <section class="team">
+    <div class="container">
+      <div class="team-header">
+        <span class="section-label">Our People</span>
+        <h2>The House Team</h2>
+      </div>
+      
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="team-member-image">SH</div>
+          <div>
+            <h4>Sandi Hall</h4>
+            <p class="team-member-role">Resident Host</p>
+            <p>Our Resident Host is the soul of Sister Ev and offers hospitality to our individual guests who come here to stay and seek peace and refreshment.</p>
+          </div>
+        </div>
+        
+        <div class="team-member">
+          <div class="team-member-image">AD</div>
+          <div>
+            <h4>Antje Duda</h4>
+            <p class="team-member-role">Director</p>
+            <p>Antje looks after the bookings, planning, the day retreats and the calm running of the annual programme of the house.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Chapel -->
+  <section class="chapel" id="chapel">
+    <div class="container">
+      <div class="chapel-content">
+        <div class="chapel-text">
+          <span class="section-label" style="color: var(--color-gold);">St. Francis Chapel</span>
+          <h2>Our Prayer Rhythm</h2>
+          <p>The chapel is a quiet, reflective space for prayer and small gatherings, open for all guests. During the week we have regular Prayer Times that are open to the public — everyone is welcome to join in.</p>
+          <p>Our beautifully handmade prayer stools are crafted from original Sister Eveleen Retreat House weatherboard or Rimu by Dugald Wilson from our Board. Suggested Koha is $50.</p>
+        </div>
+        
+        <div class="prayer-times">
+          <h3>Weekly Prayer Times</h3>
+          <div class="prayer-time-item">
+            <span class="prayer-time-day">Monday, 12pm</span>
+            <span class="prayer-time-type">Contemplative</span>
+          </div>
+          <div class="prayer-time-item">
+            <span class="prayer-time-day">Tuesday, 12pm</span>
+            <span class="prayer-time-type">Taizé</span>
+          </div>
+          <div class="prayer-time-item">
+            <span class="prayer-time-day">Wednesday, 7pm</span>
+            <span class="prayer-time-type">Evening Prayer</span>
+          </div>
+          <div class="prayer-time-item">
+            <span class="prayer-time-day">Thursday, 12pm</span>
+            <span class="prayer-time-type">Celtic Christian Service</span>
+          </div>
+          <div class="prayer-note">
+            All prayer times are open to the public. Everyone is welcome.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery-header">
+        <span class="section-label">Gallery</span>
+        <h2>Glimpses of Our Retreat</h2>
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://static.wixstatic.com/media/ea1911_738d657da53e4453bc7fd47731da8beb~mv2_d_4288_2848_s_4_2.jpg/v1/fill/w_800,h_600,al_c,q_80,enc_avif,quality_auto/ea1911_738d657da53e4453bc7fd47731da8beb~mv2_d_4288_2848_s_4_2.jpg" alt="View from Sister Eveleen">
+          <div class="gallery-item-overlay"><span>Ocean View</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://static.wixstatic.com/media/ea1911_3441b6e9ef984e6a8a4520e9c51274fd~mv2_d_4288_2848_s_4_2.jpg/v1/fill/w_400,h_300,al_c,q_80,enc_avif,quality_auto/ea1911_3441b6e9ef984e6a8a4520e9c51274fd~mv2_d_4288_2848_s_4_2.jpg" alt="Entrance">
+          <div class="gallery-item-overlay"><span>Welcome Door</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://static.wixstatic.com/media/ea1911_75ac9d726cce45db9e09e791695c3a64~mv2_d_3504_2608_s_4_2.jpg/v1/fill/w_400,h_300,al_c,q_80,enc_avif,quality_auto/ea1911_75ac9d726cce45db9e09e791695c3a64~mv2_d_3504_2608_s_4_2.jpg" alt="Chapel">
+          <div class="gallery-item-overlay"><span>St Francis Chapel</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://static.wixstatic.com/media/ea1911_c164c1bf31b74070bbb369834aaba324~mv2_d_4288_2848_s_4_2.jpg/v1/fill/w_400,h_300,al_c,q_80,enc_avif,quality_auto/ea1911_c164c1bf31b74070bbb369834aaba324~mv2_d_4288_2848_s_4_2.jpg" alt="Room">
+          <div class="gallery-item-overlay"><span>Peaceful Rooms</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://static.wixstatic.com/media/ea1911_5837a57954cf422ba8c7c5d6ea613aea~mv2_d_4288_2848_s_4_2.jpg/v1/fill/w_400,h_300,al_c,q_80,enc_avif,quality_auto/ea1911_5837a57954cf422ba8c7c5d6ea613aea~mv2_d_4288_2848_s_4_2.jpg" alt="Garden">
+          <div class="gallery-item-overlay"><span>Garden Path</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Things to Do -->
+  <section class="things-to-do" id="things-to-do">
+    <div class="container">
+      <div class="things-header">
+        <span class="section-label">See & Do</span>
+        <h2>Things to Do Nearby</h2>
+      </div>
+      
+      <div class="things-grid">
+        <div class="thing-card">
+          <div class="thing-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+          </div>
+          <h4>Coastal Walks</h4>
+          <p>Many coastal walks are easily accessible — Scarborough to Taylor's Mistake, Flowers Track, the Esplanade, or a prayer pilgrimage to The Lighthouse in Mount Pleasant.</p>
+        </div>
+        
+        <div class="thing-card">
+          <div class="thing-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h4>Sumner Beach</h4>
+          <p>Below the house lies Sumner Beach — perfect for walking, running, swimming, or relaxing. Join the Scarborough Morning Dippers every Friday at 7am!</p>
+        </div>
+        
+        <div class="thing-card">
+          <div class="thing-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          </div>
+          <h4>Water Sports</h4>
+          <p>Sumner beach offers great swell for surfing and SUP boarding, as well as kayaking and even sailing opportunities.</p>
+        </div>
+        
+        <div class="thing-card">
+          <div class="thing-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h4>Sunday Market</h4>
+          <p>The Sumner Market runs every Sunday 10am–2pm on the corner of Marriner Street and the Esplanade — craft stalls, food trucks, and friendly locals.</p>
+        </div>
+        
+        <div class="thing-card">
+          <div class="thing-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+          </div>
+          <h4>Local Cafés</h4>
+          <p>Sumner Village has plenty of great cafés — Dot Com, Utopia Ice, and Joe's Garage are local favourites for good food and coffee.</p>
+        </div>
+        
+        <div class="thing-card">
+          <div class="thing-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <h4>Christchurch City</h4>
+          <p>Just 20 minutes by car (25 min by bus) — explore the city's history, shopping, sights, and urban adventures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonial -->
+  <section class="testimonial">
+    <div class="container">
+      <div class="testimonial-content">
+        <p class="testimonial-quote">Thank you for the hidden treasure on the hill... and the warm hospitality and care it provides that supports us to open to the hidden treasure within our hearts.</p>
+        <p class="testimonial-author">— A Guest</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Calendar -->
+  <section class="calendar" id="calendar">
+    <div class="container">
+      <div class="calendar-header">
+        <span class="section-label">Availability</span>
+        <h2>Check Our Calendar</h2>
+      </div>
+      
+      <div class="calendar-embed">
+        <p>Calendar integration available — contact us to check availability for your preferred dates.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Access -->
+  <section class="access" id="access">
+    <div class="container">
+      <div class="access-content">
+        <div class="access-text">
+          <span class="section-label">Getting Here</span>
+          <h2>Access Information</h2>
+          <p>SERH is a very secluded retreat, which unfortunately means there is limited vehicular access.</p>
+          <p>Cars should be parked beside the Scarborough pool (marked on the map), as there is no parking or easy drop-off access at SERH. From there, getting to SERH involves a ten minute uphill walk, then a short walk up a steep uneven zigzag path that is not wheelchair friendly.</p>
+          <p>We are well accessible by public transport, foot, or bike. You will receive detailed instructions before your arrival.</p>
+          
+          <div class="access-note">
+            <h4>Address</h4>
+            <p>6 Whitewash Head Road<br>Sumner, Christchurch<br>New Zealand</p>
+          </div>
+        </div>
+        
+        <div class="access-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.8234567890123!2d172.76123456789012!3d-43.56789012345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d318a1234567890%3A0x1234567890abcdef!2s6%20Whitewash%20Head%20Road%2C%20Sumner%2C%20Christchurch!5e0!3m2!1sen!2snz!4v1234567890123" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Downloads -->
+  <section class="downloads">
+    <div class="container">
+      <div class="downloads-inner">
+        <div class="downloads-text">
+          <h3>2026 Retreat Programme</h3>
+          <p>Download our programme to plan your visit or share with friends.</p>
+        </div>
+        <div class="downloads-links">
+          <a href="#" class="download-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            For Print
+          </a>
+          <a href="#" class="download-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+            For Sharing
+          </a>
+          <a href="#" class="download-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            Posters
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Stay Connected</h2>
+        <p>Receive updates about upcoming retreats, reflections, and news from Sister Eveleen Retreat House.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-label" style="color: var(--color-gold);">Get in Touch</span>
+          <h2>Contact Us</h2>
+          <p>We look forward to welcoming and hosting you! If you have any questions or would like to make a booking, please don't hesitate to reach out.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <div>
+                <a href="tel:+64225636879">+64 22 563 6879</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <div>
+                <a href="mailto:enquiry@sistereretreat.com">enquiry@sistereretreat.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div>
+                6 Whitewash Head Road<br>
+                Sumner, Christchurch<br>
+                New Zealand
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a href="https://www.instagram.com/sister.e.retreat/" target="_blank" class="social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/sistereretreat/" target="_blank" class="social-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form onsubmit="event.preventDefault(); alert('Thank you for your message! We will be in touch soon.');">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="How can we help?">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">E</div>
+            <div class="logo-text">
+              Sister Eveleen
+              <span>Retreat House</span>
+            </div>
+          </a>
+          <p>A Christian retreat house nestled among native trees and beach flora on Scarborough Hill, Sumner — a sacred space to reflect, rest, pray, or simply be.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#rooms">Our Rooms</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#chapel">Chapel</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Visit</h4>
+          <ul>
+            <li><a href="#things-to-do">See & Do</a></li>
+            <li><a href="#access">Getting Here</a></li>
+            <li><a href="#calendar">Availability</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#">Retreats Programme</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Become a Friend</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2026 Sister Eveleen Retreat House. Anglican Diocese of Christchurch.</p>
+        <p>Website lovingly managed by humans. <a href="#contact">Get in touch</a> if something needs correcting.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('active');
+      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerOffset = 80;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+    
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+    
+    // Make hero visible immediately
+    document.querySelector('.hero').style.opacity = '1';
+    document.querySelector('.hero').style.transform = 'translateY(0)';
+  </script>
+</body>
+</html>
