@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --version:*)",
+      "Bash(npm:*)",
+      "WebFetch(domain:www.sistereretreat.com)",
+      "WebSearch",
+      "WebFetch(domain:acsd.org.nz)",
+      "WebFetch(domain:weconnect.nz)",
+      "WebFetch(domain:johndierckx.wordpress.com)",
+      "Bash(npx tsc:*)",
+      "Bash(npx vite:*)"
+    ]
+  }
+}
